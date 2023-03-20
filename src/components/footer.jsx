@@ -27,21 +27,21 @@ function Footer() {
             <section className="flex flex-col gap-y-3">
                 <h5 className='text-lg font-semibold'>Payment</h5>
                 <div className="grid grid-cols-3 gap-1.5">
-                    <img src="./src/assets/payment/bca.svg" alt="" />
-                    <img src="./src/assets/payment/dana.svg" alt="" />
-                    <img src="./src/assets/payment/gopay.svg" alt="" />
-                    <img src="./src/assets/payment/mastercard.svg" alt="" />
-                    <img src="./src/assets/payment/paypal.svg" alt="" />
-                    <img src="./src/assets/payment/qris.svg" alt="" />
+                    <img src="payment/bca.svg" alt="" />
+                    <img src="payment/dana.svg" alt="" />
+                    <img src="payment/gopay.svg" alt="" />
+                    <img src="payment/mastercard.svg" alt="" />
+                    <img src="payment/paypal.svg" alt="" />
+                    <img src="payment/qris.svg" alt="" />
                 </div>
             </section>
             <section className="flex flex-col gap-y-3">
                 <h5 className='text-lg font-semibold'>Shipping</h5>
                 <div className="grid grid-cols-2 gap-1.5">
-                    <img src="./src/assets/shipping/dhl.svg" alt="" />
-                    <img src="./src/assets/shipping/fedex.svg" alt="" />
-                    <img src="./src/assets/shipping/jett.svg" alt="" />
-                    <img src="./src/assets/shipping/jne.svg" alt="" />
+                    <img src="shipping/dhl.svg" alt="" />
+                    <img src="shipping/fedex.svg" alt="" />
+                    <img src="shipping/jett.svg" alt="" />
+                    <img src="shipping/jne.svg" alt="" />
                 </div>
             </section>
         </div>
