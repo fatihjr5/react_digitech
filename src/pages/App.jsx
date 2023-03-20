@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
-import { CardReleases, Cards } from '../components/cards'
+import { CardMini, Cards } from '../components/cards'
 import { Link } from 'react-router-dom'
 import { commerce } from '../lib/commerce'
 // icons
@@ -22,7 +22,6 @@ function App() {
   const handleGetCart = async(productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity);
     setCart(item);
-    console.log(item)
   }
   // render
   useEffect(()=>{
@@ -55,7 +54,7 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {
           product.map((item) => 
-            <CardReleases 
+            <CardMini 
               key={item.id} 
               title={item.name} 
               stock={item.inventory.available} 

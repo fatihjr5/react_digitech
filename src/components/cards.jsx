@@ -29,7 +29,7 @@ export const Cards = (props) => {
   )
 }
 
-export const CardReleases = (props) => {
+export const CardMini = (props) => {
   return (
     <div>
         <img className='h-40 mx-auto' src={props.image} alt={props.title} />
@@ -43,9 +43,14 @@ export const CardReleases = (props) => {
                 </div>
             </div>
         </div>
-        <button className="mt-5 w-full p-2 ring-1 ring-gray-400 text-center rounded-md">
-            <Link to={`/product/${props.title}`}>Buy Now</Link>
-        </button>
+        <div className="flex flex-row items-center justify-between mt-5 gap-x-4">
+            <button className="w-full p-2 ring-1 ring-gray-200 text-center rounded-md" onClick={props.addCart}>
+                <p className='text-gray-400'>add to cart</p>
+            </button>
+            <button className="w-full p-2 ring-1 ring-black text-center rounded-md">
+                <Link to={`/product/${props.title}`} className='font-semibold'>Buy Now</Link>
+            </button>
+        </div>
     </div>
   )
 }
