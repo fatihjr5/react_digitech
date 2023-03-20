@@ -76,7 +76,7 @@ function App() {
                 <HiOutlineExternalLink/>
               </Link>
             </div>
-            <img className='w-full lg:w-96 lg:ml-auto' src="./src/assets/Nothing Phone 1.svg" alt="" />
+            <img className='w-full lg:w-96 lg:ml-auto' src="/src/assets/Nothing Phone 1.svg" alt="" />
           </div>
           {/* second Card */}
           <div className="p-8 bg-[#FAFAFC] shadow-md rounded-lg">
@@ -100,7 +100,7 @@ function App() {
               <HiOutlineExternalLink/>
             </Link>
           </div>
-          <img src="./src/assets/Mac Studio.svg" alt="" />
+          <img src="/src/assets/Mac Studio.svg" alt="" />
         </div>
       </section>
     </Layout>
