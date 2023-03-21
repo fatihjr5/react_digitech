@@ -31,11 +31,11 @@ function Navbar({cart}) {
             <Link className={`text-sm text-gray-500 hover:text-green-800 ${location.pathname === '/hot-sale' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/hot-sale">
               Hot Sale
             </Link>
-            <Link className={`text-sm text-gray-500 hover:text-green-800 ${location.pathname === '/new-release' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/new-release">
-              New Product
-            </Link>
             <Link className={`text-sm text-gray-500 hover:text-green-800 ${location.pathname === '/product' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/product">
               Product
+            </Link>
+            <Link className={`text-sm text-gray-500 hover:text-green-800 ${location.pathname === '/how-to-order' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/new-release">
+              How to order
             </Link>
             </div>
             <span className='text-gray-300'>|</span>
@@ -65,11 +65,11 @@ function Navbar({cart}) {
                   <Link className={`text-base text-gray-500 hover:text-green-800 ${location.pathname === '/hot-sale' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/hot-sale">
                     Hot Sale
                   </Link>
-                  <Link className={`text-base text-gray-500 hover:text-green-800 ${location.pathname === '/new-release' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/new-release">
-                    New Product
-                  </Link>
                   <Link className={`text-base text-gray-500 hover:text-green-800 ${location.pathname === '/product' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/product">
                     Product
+                  </Link>
+                  <Link className={`text-base text-gray-500 hover:text-green-800 ${location.pathname === '/how-to-order' ? 'font-semibold text-green-800' : 'hover:font-semibold'}`} to="/new-release">
+                    How to order
                   </Link>
                 </div>
                 <Link>
