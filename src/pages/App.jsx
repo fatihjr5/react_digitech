@@ -36,7 +36,7 @@ function App() {
         <h5 className='text-3xl font-medium'>Fresh From <br /> Oven</h5>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {
-          product.map((item) => 
+          product.map((item, i) => (i < 3 &&
             <Cards 
               key={item.id} 
               title={item.name} 
@@ -44,7 +44,7 @@ function App() {
               image={item.image.url} 
               price={item.price.formatted}
               addCart={()=>handleGetCart(item.id, 1)}
-            />)
+            />))
         }
         </div>
       </section>
@@ -53,14 +53,15 @@ function App() {
         <h5 className='text-3xl font-medium'>Most People<br />Looking For</h5>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {
-          product.map((item) => 
+          product.map((item, i) => (i < 8 &&
             <CardMini 
               key={item.id} 
               title={item.name} 
               stock={item.inventory.available} 
               image={item.image.url} 
               price={item.price.formatted}
-            />)
+              addCart={()=>handleGetCart(item.id, 1)}
+            />))
         }
         </div>
       </section>
