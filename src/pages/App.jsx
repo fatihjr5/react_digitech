@@ -71,7 +71,7 @@ function App() {
                       stock={item.inventory.available} 
                       image={item.image.url} 
                       price={item.price.formatted}
-                      addCart={()=>handleGetCart(item.id, 1)}
+                      addCart={()=>handleGetCart(item.id, 0)}
                     />
                   ))
                 }
