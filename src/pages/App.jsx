@@ -64,7 +64,7 @@ function App() {
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                 {
-                  product.map((item, i) => (i < 3 &&
+                  product.map((item, i) => (i < 8 &&
                     <CardMini 
                       key={item.id} 
                       title={item.name} 
