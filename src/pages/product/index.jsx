@@ -66,7 +66,7 @@ function Index() {
             <h5 className="text-3xl font-medium text-center">Your One-Stop Shop for <br /> the Hottest Products</h5>
             <input type="text" placeholder='Search Here' className='mx-auto border-b w-96 pl-4 pb-1 focus:outline-none' onChange={(e) => setSearchText(e.target.value)} />
         </section>
-        {loading ? (
+        { loading ? (
           <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto mt-20'/>
         ) : (
           content
