@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom'
 import { commerce } from '../lib/commerce'
 // icons
 import { HiOutlineExternalLink } from 'react-icons/hi'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
 function App() {
   const [product, setProduct] = useState([]);
   const [cart, setCart] = useState({});
+  const [loading, setLoading] = useState(true);
 
   // get Product
   const getProduct = async() => {
     const { data } = await commerce.products.list();
     setProduct(data);
+    setLoading(false)
   }
   // add cart
   const getCart =  async() => {
@@ -34,36 +37,46 @@ function App() {
       {/* Latest */}
       <section className="flex flex-col gap-y-10 mb-20">
         <h5 className='text-3xl font-medium'>Fresh From <br /> Oven</h5>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {
-          product.map((item, i) => (i < 3 &&
-            <Cards 
-              key={item.id} 
-              title={item.name} 
-              stock={item.inventory.available} 
-              image={item.image.url} 
-              price={item.price.formatted}
-              addCart={()=>handleGetCart(item.id, 1)}
-            />))
-        }
-        </div>
+          {loading ? (
+            <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto'/>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {
+                  product.map((item, i) => (i < 3 &&
+                    <Cards 
+                      key={item.id} 
+                      title={item.name} 
+                      stock={item.inventory.available} 
+                      image={item.image.url} 
+                      price={item.price.formatted}
+                      addCart={()=>handleGetCart(item.id, 1)}
+                    />
+                  ))
+                }
+              </div>
+          )}
       </section>
       {/* Most People Searched */}
       <section className="flex flex-col gap-y-10 mb-20">
         <h5 className='text-3xl font-medium'>Most People<br />Looking For</h5>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {
-          product.map((item, i) => (i < 8 &&
-            <CardMini 
-              key={item.id} 
-              title={item.name} 
-              stock={item.inventory.available} 
-              image={item.image.url} 
-              price={item.price.formatted}
-              addCart={()=>handleGetCart(item.id, 1)}
-            />))
-        }
-        </div>
+          {loading ? (
+            <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto'/>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                {
+                  product.map((item, i) => (i < 3 &&
+                    <CardMini 
+                      key={item.id} 
+                      title={item.name} 
+                      stock={item.inventory.available} 
+                      image={item.image.url} 
+                      price={item.price.formatted}
+                      addCart={()=>handleGetCart(item.id, 1)}
+                    />
+                  ))
+                }
+              </div>
+          )}
       </section>
       {/* Crazy Deals */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
