@@ -6,6 +6,7 @@ import { commerce } from '../lib/commerce'
 // icons
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import Carousels from '../components/carousel'
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -16,6 +17,7 @@ function App() {
   const getProduct = async() => {
     const { data } = await commerce.products.list();
     setProduct(data);
+    console.log(data)
     setLoading(false)
   }
   // add cart
@@ -34,17 +36,20 @@ function App() {
 
   return (
     <Layout handleGetCart={handleGetCart} cart={cart}>
+      {/* Banner */}
+      <Carousels/>
       {/* Latest */}
       <section className="flex flex-col gap-y-10 mb-20">
         <h5 className='text-3xl font-medium'>Fresh From <br /> Oven</h5>
           {loading ? (
             <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto'/>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {
                   product.map((item, i) => (i < 3 &&
                     <Cards 
                       key={item.id} 
+                      id={item.id} 
                       title={item.name} 
                       stock={item.inventory.available} 
                       image={item.image.url} 
@@ -62,11 +67,12 @@ function App() {
           {loading ? (
             <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto'/>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {
                   product.map((item, i) => (i < 8 &&
                     <CardMini 
                       key={item.id} 
+                      url={item.id} 
                       title={item.name} 
                       stock={item.inventory.available} 
                       image={item.image.url} 

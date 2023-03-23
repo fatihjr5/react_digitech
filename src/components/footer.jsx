@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className='mt-20'>
         <div className='flex flex-col lg:flex-row justify-between gap-y-4 lg:gap-y-0 items-start px-10 md:px-16 xl:px-24 py-6'>
-            <img src="./digitech.svg" alt="" />
+            <img src="/digitech.svg" alt="" />
             <section className="flex flex-col gap-y-3">
                 <h5 className='text-lg font-semibold'>Product</h5>
                 <div className="flex flex-col gap-y-1">
@@ -27,21 +27,21 @@ function Footer() {
             <section className="flex flex-col gap-y-3">
                 <h5 className='text-lg font-semibold'>Payment</h5>
                 <div className="grid grid-cols-3 gap-1.5">
-                    <img src="payment/bca.svg" alt="" />
-                    <img src="payment/dana.svg" alt="" />
-                    <img src="payment/gopay.svg" alt="" />
-                    <img src="payment/mastercard.svg" alt="" />
-                    <img src="payment/paypal.svg" alt="" />
-                    <img src="payment/qris.svg" alt="" />
+                    <img src="/payment/bca.svg" alt="" />
+                    <img src="/payment/dana.svg" alt="" />
+                    <img src="/payment/gopay.svg" alt="" />
+                    <img src="/payment/mastercard.svg" alt="" />
+                    <img src="/payment/paypal.svg" alt="" />
+                    <img src="/payment/qris.svg" alt="" />
                 </div>
             </section>
             <section className="flex flex-col gap-y-3">
                 <h5 className='text-lg font-semibold'>Shipping</h5>
                 <div className="grid grid-cols-2 gap-1.5">
-                    <img src="shipping/dhl.svg" alt="" />
-                    <img src="shipping/fedex.svg" alt="" />
-                    <img src="shipping/jett.svg" alt="" />
-                    <img src="shipping/jne.svg" alt="" />
+                    <img src="/shipping/dhl.svg" alt="" />
+                    <img src="/shipping/fedex.svg" alt="" />
+                    <img src="/shipping/jett.svg" alt="" />
+                    <img src="/shipping/jne.svg" alt="" />
                 </div>
             </section>
         </div>

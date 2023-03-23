@@ -22,9 +22,9 @@ function Navbar({cart}) {
     setOpen(false);
   };
   return (
-    <div className='flex flex-row items-center justify-between bg-white border-b border-gray-200 px-10 md:px-16 xl:px-24 py-6 w-full fixed'>
+    <div className='flex flex-row items-center justify-between bg-white border-b border-gray-200 px-10 md:px-16 xl:px-24 py-6 w-full fixed z-50'>
         <Link to="/">
-          <img src="./digitech.svg" alt="" />
+          <img src="/digitech.svg" alt="" />
         </Link>
         <div className="lg:flex flex-row items-center gap-x-4 ml-auto hidden">
             <div className="flex flex-row items-center gap-x-4">

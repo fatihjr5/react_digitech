@@ -22,7 +22,7 @@ export const Cards = (props) => {
         </div>
         <div className="flex flex-row items-center justify-between mt-5 gap-x-2">
             <button className="w-full p-2 ring-1 ring-green-800 text-green-800 text-center rounded-md">
-                <Link to={`/product/${props.title}`} className='font-semibold'>Buy Now</Link>
+                <Link to={`/product/${props.id}`} className='font-semibold'>Buy Now</Link>
             </button>
             <button className="w-fit p-2 ring-1 ring-slate-500 hover:bg-slate-400 text-slate-500 duration-100 ease-in hover:text-white hover:ring-0 text-center rounded-md" onClick={props.addCart}>
                 <BsCart/>
@@ -50,7 +50,7 @@ export const CardMini = (props) => {
         </div>
         <div className="flex flex-row items-center justify-between mt-5 gap-x-4">
             <button className="w-full p-2 ring-1 ring-green-800 text-green-800 text-center rounded-md">
-                <Link to={`/product/${props.title}`} className='font-semibold'>Buy Now</Link>
+                <Link to={`/product/${props.url}`} className='font-semibold'>Buy Now</Link>
             </button>
             <button className="w-fit p-2 ring-1 ring-slate-500 hover:bg-slate-400 text-slate-500 duration-100 ease-in hover:text-white hover:ring-0 text-center rounded-md" onClick={props.addCart}>
                 <BsCart/>
