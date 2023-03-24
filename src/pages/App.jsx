@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
-import { CardMini, Cards } from '../components/cards'
+import { Cards } from '../components/cards'
 import { Link } from 'react-router-dom'
 import { commerce } from '../lib/commerce'
 // icons
@@ -43,9 +43,9 @@ function App() {
           {loading ? (
             <AiOutlineLoading3Quarters className='animate-spin duration-75 mx-auto'/>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {
-                  product.map((item, i) => (i < 3 &&
+                  product.map((item, i) => (i < 4 &&
                     <Cards 
                       key={item.id} 
                       id={item.id} 
@@ -69,7 +69,7 @@ function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {
                   product.map((item, i) => (i < 8 &&
-                    <CardMini 
+                    <Cards 
                       key={item.id} 
                       url={item.id} 
                       title={item.name} 

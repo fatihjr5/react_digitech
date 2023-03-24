@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../../components/layout'
-import { CardMini } from '../../components/cards'
+import { Cards } from '../../components/cards'
 import { commerce } from '../../lib/commerce'
 import { AiOutlineInbox, AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { Input } from 'antd';
@@ -36,7 +36,7 @@ function Index() {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mt-20">
         {
           filteredProduct.map((item) => (
-            <CardMini 
+            <Cards 
               key={item.id} 
               title={item.name} 
               stock={item.inventory.available} 
