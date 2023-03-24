@@ -53,7 +53,7 @@ function Navbar({cart}) {
             {/* cart */}
             <div className='flex'>
               <BsCart className='text-lg'/>
-              <div className="w-auto h-auto p-1 -mt-2 ml-2 rounded-full bg-red-500 absolute text-xs text-white">{totalItems}</div>
+              <div className="w-auto h-auto px-1.5 py-0.5 -mt-2 ml-2 rounded-full bg-red-500 absolute text-xs text-white">{totalItems > 10 ? '9+' : totalItems}</div>
             </div>
             {/* drawer */}
             <div>
