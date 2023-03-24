@@ -91,7 +91,7 @@ export const CardMini = (props) => {
       });
     };
   return (
-    <div>
+    <div className='flex flex-col justify-between'>
         {
           compressedImage ? (
             <img className='h-36 mx-auto' src={compressedImage} alt={props.title} />
