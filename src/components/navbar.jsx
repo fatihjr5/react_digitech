@@ -42,7 +42,7 @@ function Navbar({cart}) {
             <div className="flex flex-row items-center gap-x-4">
                 <button className='flex'>
                   <BsCart className='text-base'/>
-                  <div className="px-1.5 -mt-2 ml-2 py-0.5 rounded-full bg-red-500 absolute text-xs text-white">{totalItems}</div>
+                  <div className="px-1.5 -mt-2 ml-2 py-0.5 rounded-full bg-red-500 absolute text-xs text-white">{totalItems > 10 ? '9+' : totalItems}</div>
                 </button>
                 <button><VscAccount className='text-base'/></button>
             </div>
