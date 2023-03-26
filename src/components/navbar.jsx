@@ -40,10 +40,10 @@ function Navbar({cart}) {
             </div>
             <span className='text-gray-300'>|</span>
             <div className="flex flex-row items-center gap-x-4">
-                <button className='flex'>
+                <Link className='flex' to="/cart">
                   <BsCart className='text-base'/>
                   <div className="px-1.5 -mt-2 ml-2 py-0.5 rounded-full bg-red-500 absolute text-xs text-white">{totalItems > 10 ? '9+' : totalItems}</div>
-                </button>
+                </Link>
                 <button><VscAccount className='text-base'/></button>
             </div>
         </div>
@@ -51,10 +51,10 @@ function Navbar({cart}) {
         <div className='block lg:hidden'>
           <div className="flex flex-row items-center gap-x-6">
             {/* cart */}
-            <div className='flex'>
+            <Link className='flex' to="/cart">
               <BsCart className='text-lg'/>
               <div className="w-auto h-auto px-1.5 py-0.5 -mt-2 ml-2 rounded-full bg-red-500 absolute text-xs text-white">{totalItems > 10 ? '9+' : totalItems}</div>
-            </div>
+            </Link>
             {/* drawer */}
             <div>
               <button onClick={showDrawer} className='mt-2'>
