@@ -10,7 +10,13 @@ const Carts = () => {
 
   const getProducts = async () => {
     const { data } = await commerce.products.list();
-    setProducts(data);
+    const products = data.map(({ id, name, price, image }) => ({
+      id,
+      name,
+      price,
+      image: image.url,
+    }));
+    setProducts(products);
   };
 
   const getCart = async () => {
@@ -40,18 +46,20 @@ const Carts = () => {
   );
 
   let totalItems;
-  if(filteredProducts > 0) {
-    <div>
-      {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-          <p>{product.price.formatted_with_symbol}</p>
-          <button onClick={() => handleRemoveFromCart(product.id)}>
-            Remove from Cart
-          </button>
-        </div>
-      ))}
-    </div>
+  if (filteredProducts.length > 0) {
+    totalItems = (
+      <div>
+        {filteredProducts.map((product) => (
+          <div key={product.id}>
+            <h2>{product.name}</h2>
+            <p>{product.price.formatted_with_symbol}</p>
+            <button onClick={() => handleRemoveFromCart(product.id)}>
+              Remove from Cart
+            </button>
+          </div>
+        ))}
+      </div>
+    );
   } else {
     totalItems = (
       <div className='flex flex-col space-y-2 text-center mt-20'>
